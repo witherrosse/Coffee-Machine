@@ -32,7 +32,7 @@ resources = {
 }
 profit = 0
 
-### Check if there are enough ingredients to make the drink ###
+
 
 def resources_check(order_ingredients):
 
@@ -45,7 +45,7 @@ def resources_check(order_ingredients):
             return False
     return True
 
-### Take coins from user and calculate total money ###
+
 
 def process_coins():
 
@@ -58,7 +58,7 @@ def process_coins():
     total +=int(input("How meany pennies?")) * 0.01
     return total
 
-###Check if user paid enough and give change if needed ###
+
 
 def is_enough_money(money_recived, drink_cost):
 
@@ -90,19 +90,19 @@ def make_cofee(drink_name, order_ingredients):
 
 machine_is_on = True
 
-### Main loop to run the coffee machine ###
+
 
 while machine_is_on:
 
     user_input = input("What would you like? (espresso/latte/cappuccino)\n").lower()
 
-    ### Turn off the machine ###
+    
 
     if user_input == "off":
 
         machine_is_on = False
 
-    ### Show a report of remaining resources and profit ###
+    
 
     elif user_input == "report":
 
@@ -114,7 +114,7 @@ while machine_is_on:
 
         drink = MENU[user_input]
 
-        ###Check resources, take money, then make the drink  ###
+        
 
         if resources_check(drink["ingredients"]) is True:
 
